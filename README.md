@@ -1,1 +1,1 @@
-# python2033_scraping_avito
+# python2033_scraping
