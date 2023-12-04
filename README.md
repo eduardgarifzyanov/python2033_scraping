@@ -1,4 +1,4 @@
-![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/2dedb2aa-3be7-4f28-94c1-a98975485629)# python2033_scraping
+# python2033_scraping
 
 Представляю вам приложение-парсер, которое находит книги на сайте "Читай-город" по ващему запросу
 
