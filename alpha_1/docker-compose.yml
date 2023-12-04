@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  my_app:
+    container_name: my_fisrt_parser
+    restart: on-failure
+    build: 
+      dockerfile: ./parser_project/Dockerfile
+    volumes:
+      - ./parser_project:/parser
+    ports:
+      - 5001:5001
+    command: python3 app.py

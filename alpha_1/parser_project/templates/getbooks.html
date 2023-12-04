@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Ответ на ваш запрос
+{% endblock %}
+
+{% block body %}
+<section class="title container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ title }}</h1>
+      <div class="seperator"></div>
+      <p>Для регистрации следующего запроса нажмите на кнопу "Запрос"</p>
+    </div>
+  </div>
+</section>
+
+<!-- Start Blog Layout -->
+<div class="row">
+  {% for book in getbooks %}
+  <div class="col-md-6 item">
+    <div class="item-in">
+      <h2>{{ book.title }}</h2>
+      <div class="seperator"></div>
+      <h4 class="mt-1">Автор: {{ book.author }}</h4>
+      <h4 class="mt-1">Цена: {{ book.price }}</h4>
+      <h4 class="mt-1">Издательство: {{ book.publishing }}</h4>
+      <h4 class="mt-1">Год издания: {{ book.year_release }}</h4>
+      <h4 class="mt-1">Количество страниц: {{ book.pages }}</h4>
+      <h4>Описание:</h4>
+      <p style="font-size: 15px">{{ book.description }}</p>
+      <a href="{{ book.url }}"> <p>{{ book.url }}</p></a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

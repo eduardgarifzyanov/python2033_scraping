@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Запрос
+{% endblock %}
+
+{% block body %}
+<section class="title container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Здесь Вы можете получить информацию о какой-либо книге</h2>
+      <div class="seperator"></div>
+      <p>Время парсинга зависит от популярности книги. Пожалуйста подождите...</p>
+    </div>
+  </div>
+</section>
+
+<form method="post" class="form-control">
+    <input type="search" class="form-control form-control-dark text-bg-white" name="title" placeholder="Введите название книги..." aria-label="Search">
+</form>
+
+<div class="text-center">
+  <img width="1000" height="auto" class="mt-5" src="https://i.yapx.cc/RFyyB.gif">
+</div>
+{% endblock %}
