@@ -18,13 +18,19 @@
 
 1. Для начала скачайте себе папку alpha_1 и скрипт build.sh
 2. Запустите скрипт build.sh (./build.sh, возможно нужно будет выдать правана на запуск)
-3. Подождите пока проект запустится и по окончанию в консоли будет выведены эти строки: ![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/da4e8b33-74be-43c7-a7af-352f771dea25)
-4. Переходим по первой ссылке: ![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/0bdb638f-115d-4b78-b8e2-59c26dead59c)
-5. И попадаем на главную страницу, где вас встречает милые капибары: ![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/15e0be0a-2d1e-433f-b857-7c73de874512)
-6. Далее вы можете перейти по кнопке "Запрос" для того чтобы проверить парсер и получить информацию о книгах. ![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/30126d0d-2314-4be1-95bc-f4961ba054f6)
+3. Подождите пока проект запустится и по окончанию в консоли будет выведены эти строки: 
+![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/da4e8b33-74be-43c7-a7af-352f771dea25)
+4. Переходим по первой ссылке: 
+![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/0bdb638f-115d-4b78-b8e2-59c26dead59c)
+5. И попадаем на главную страницу, где вас встречает милые капибары: 
+![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/15e0be0a-2d1e-433f-b857-7c73de874512)
+6. Далее вы можете перейти по кнопке "Запрос" для того чтобы проверить парсер и получить информацию о книгах. 
+![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/30126d0d-2314-4be1-95bc-f4961ba054f6)
 7. В строке поиска введите ваш запрос. (Время обработки вашего запроса зависит от количества книг найденых по вашему запросу).
-8. Как пример, я ввел запрос "Зонт" и спустя некоторое время меня перенаправило на страницу с ответом на запрос: ![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/5c841020-c0a5-4d6c-89ac-04f60bca4708)
-Здесь вы можете увидеть в заголовке ваш запрос, а ниже, в так называемых "Карточках", информацию об найденых книгах по запросу. ![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/43577fdc-e586-4917-8e2b-fe7983dd6ba7)
+8. Как пример, я ввел запрос "Зонт" и спустя некоторое время меня перенаправило на страницу с ответом на запрос: 
+![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/5c841020-c0a5-4d6c-89ac-04f60bca4708)
+Здесь вы можете увидеть в заголовке ваш запрос, а ниже, в так называемых "Карточках", информацию об найденых книгах по запросу. 
+![image](https://github.com/eduardgarifzyanov/python2033_scraping/assets/150543936/43577fdc-e586-4917-8e2b-fe7983dd6ba7)
 
 
 
