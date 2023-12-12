@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup as bs
 import requests
 import fake_useragent
+import logging
 
+logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="w")
 
 class Parser:
 
@@ -32,7 +34,7 @@ class Parser:
             for i in number_pages[:-1]:
                 pages.append(i.find('span', class_='pagination__text').get_text(strip='\n'))
         except Exception:
-            pass
+            logging.error(f"Страница по запросу {request} не найдена")
         if (len(pages) != 0) :
             number = int(pages[-1])
         self.html_list = []
@@ -63,7 +65,7 @@ class Parser:
             try:
                 ads = soup.find('div', class_='products-list').find_all('div', class_='product-card__text product-card__row')
             except Exception:
-                print('Данной страницы не существует')
+                logging.error("Страница по запросу не найдена")
             for ad in ads:
                 link = 'https://www.chitai-gorod.ru' + ad.find('a', class_='product-card__title').get('href')
                 all_links.append(link)
@@ -77,7 +79,7 @@ class Parser:
                      .find('div', class_='product-detail-title').find('h1')
                      .get_text(strip='\n'))
         except Exception:
-            title = 'ERROR'
+            title = 'Нет информации о названии'
         try:
             author = (soup.find("div", class_='product-info-area product-page__info-container')
                       .find('div', class_='product-detail-title')

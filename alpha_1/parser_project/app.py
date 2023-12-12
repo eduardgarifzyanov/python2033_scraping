@@ -1,24 +1,10 @@
-from flask import Flask, render_template, request, redirect
-import flask_sqlalchemy
+from flask import render_template, request, redirect
 import parcer
+import models
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///books.db'
-db = flask_sqlalchemy.SQLAlchemy(app)
+app = models.app
 req = ''
 cnt_get = None
-
-class Post(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(300))
-    author = db.Column(db.String(300))
-    price = db.Column(db.String(300))
-    publishing = db.Column(db.String(300))
-    year_release = db.Column(db.Integer)
-    pages = db.Column(db.Integer)
-    description = db.Column(db.Text)
-    url = db.Column(db.String(300))
-
 
 
 @app.route('/index')
@@ -29,7 +15,7 @@ def index():
 
 @app.route('/getbooks')
 def getbooks():
-    getbooks = db.session.query(Post).order_by(Post.id.desc()).limit(cnt_get).all()
+    getbooks = models.db.session.query(models.Post).order_by(models.Post.id.desc()).limit(cnt_get).all()
     getbooks.reverse()
     title = req
     return render_template('getbooks.html', getbooks=getbooks, title=title), 200
@@ -44,7 +30,7 @@ def myrequest():
         global cnt_get
         cnt_get = start_parser[1]
         for page in data:
-            post = Post(title=page.get('title'),
+            post = models.Post(title=page.get('title'),
                         author=page.get('author'),
                         price=page.get('price'),
                         publishing=page.get('publishing'),
@@ -53,8 +39,8 @@ def myrequest():
                         description=page.get('description'),
                         url=page.get('url'))
             try:
-                db.session.add(post)
-                db.session.commit()
+                models.db.session.add(post)
+                models.db.session.commit()
             except:
                 return 'При добавлении данных в бд произошла ошибка'
         return redirect('/getbooks')

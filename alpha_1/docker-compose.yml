@@ -6,8 +6,6 @@ services:
     restart: on-failure
     build: 
       dockerfile: ./parser_project/Dockerfile
-    volumes:
-      - ./parser_project:/parser
     ports:
       - 5001:5001
     command: python3 app.py
