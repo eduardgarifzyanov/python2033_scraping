@@ -5,6 +5,7 @@ services:
     container_name: my_fisrt_parser
     restart: on-failure
     build: 
+      context: .
       dockerfile: ./parser_project/Dockerfile
     ports:
       - 5001:5001
